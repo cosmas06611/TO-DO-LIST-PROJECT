@@ -17,8 +17,10 @@ public class TaskService {
     }
 
     public TaskSubject getTaskById(int taskId) {
-        return taskRepository.findById(taskId).get();
-    }
+        TaskSubject ts =  taskRepository.findById(taskId).get();
+        return ts;
+        }
+
 
     public TaskSubject addNewTask(TaskSubject subject) {
         taskRepository.save(subject);
